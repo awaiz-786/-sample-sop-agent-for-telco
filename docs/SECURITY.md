@@ -19,7 +19,7 @@ This document explains the security model of the SOP Agent and addresses finding
 **Files with accepted subprocess usage:**
 - `sop-agent/sop_executor.py` - Core SOP execution engine
 - `webui/backend/api.py` - kubectl commands for status checks
-- `bootstrap.py` - Deployment automation
+- `scripts/bootstrap.py` - Deployment automation
 - `day2-monitor/monitor.py` - Monitoring commands
 
 All instances are marked with `# nosec B602` or `# nosec B603` comments.

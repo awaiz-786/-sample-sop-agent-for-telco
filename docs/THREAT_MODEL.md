@@ -57,7 +57,7 @@ Prometheus → Alertmanager → Day 2 Monitor → SOP Generator (Bedrock) → SO
 - `_BLOCKED_KUBECTL` patterns block destructive kubectl operations (delete namespace, delete node, etc.)
 - Read-only kubectl verb allowlist for monitoring endpoints
 - `shlex.split()` used instead of `shell=True` where possible
-- `bootstrap.py` uses conditional `shell=True` only when metacharacters are detected, otherwise uses `shlex.split`
+- `scripts/bootstrap.py` uses conditional `shell=True` only when metacharacters are detected, otherwise uses `shlex.split`
 - Kubernetes RBAC limits the service account's permissions
 - Tool budget caps the number of tool invocations per execution
 

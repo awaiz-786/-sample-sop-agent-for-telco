@@ -23,13 +23,13 @@ git clone <repo-url>
 cd sample-sop-agent-for-strands
 
 # Deploy (handles all prerequisites automatically)
-./deploy.sh --cluster my-eks-cluster --region us-west-2
+./scripts/deploy.sh --cluster my-eks-cluster --region us-west-2
 
 # Or with a specific AWS profile
-./deploy.sh --cluster my-eks-cluster --region us-west-2 --profile my-profile
+./scripts/deploy.sh --cluster my-eks-cluster --region us-west-2 --profile my-profile
 
 # Preview what will happen (dry-run)
-./deploy.sh --cluster my-eks-cluster --dry-run
+./scripts/deploy.sh --cluster my-eks-cluster --dry-run
 ```
 
 The deployment script uses an AI agent to execute the deployment SOP, automatically:

@@ -7,7 +7,7 @@ from pathlib import Path
 
 import pytest
 
-BOOTSTRAP_PATH = Path(__file__).parent.parent / "bootstrap.py"
+BOOTSTRAP_PATH = Path(__file__).parent.parent / "scripts" / "bootstrap.py"
 
 
 class TestBootstrapCLI:
@@ -82,13 +82,13 @@ class TestDeployScript:
 
     def test_deploy_script_exists(self):
         """Test deploy.sh exists and is executable."""
-        deploy_path = Path(__file__).parent.parent / "deploy.sh"
+        deploy_path = Path(__file__).parent.parent / "scripts" / "deploy.sh"
         assert deploy_path.exists()
         assert deploy_path.stat().st_mode & 0o111  # executable
 
     def test_deploy_script_help(self):
         """Test deploy.sh --help works."""
-        deploy_path = Path(__file__).parent.parent / "deploy.sh"
+        deploy_path = Path(__file__).parent.parent / "scripts" / "deploy.sh"
         result = subprocess.run(  # nosec B603 B607 - testing own script
             ["bash", str(deploy_path), "--help"],
             capture_output=True, text=True
