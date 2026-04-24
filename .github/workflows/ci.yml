@@ -71,5 +71,5 @@ jobs:
       - name: Install and build frontend
         working-directory: webui/frontend
         run: |
-          npm ci
+          npm install
           npx vite build
