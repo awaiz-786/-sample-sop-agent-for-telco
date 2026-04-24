@@ -4,7 +4,7 @@
 FROM node:20-slim AS frontend-build
 WORKDIR /app/webui/frontend
 COPY webui/frontend/package*.json ./
-RUN npm ci
+RUN npm install
 COPY webui/frontend/ ./
 RUN npx vite build
 
