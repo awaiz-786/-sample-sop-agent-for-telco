@@ -21,7 +21,7 @@ def main():
     parser.add_argument("--dry-run", action="store_true", help="Print SOP without executing")
     args = parser.parse_args()
 
-    sop_path = Path(__file__).parent / "sops" / "00-deploy-sop-agent.md"
+    sop_path = Path(__file__).parent.parent / "sops" / "00-deploy-sop-agent.md"
     if not sop_path.exists():
         print(f"Error: SOP not found at {sop_path}")
         sys.exit(1)
